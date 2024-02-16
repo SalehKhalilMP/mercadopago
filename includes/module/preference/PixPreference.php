@@ -120,6 +120,9 @@ class PixPreference extends AbstractPreference
             'payer' => $this->getCustomerData(),
             'metadata' => $this->getInternalMetadata($this->cart),
             'additional_info' => $this->getAdditionalInfo(),
+            'point_of_interaction' => [
+                'type' => 'CHECKOUT',
+            ]
         ];
 
         return array_merge($payloadParent, $payloadAdditional);
